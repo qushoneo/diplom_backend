@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import VisitsController from './VisitsController.js';
+import EmployeeController from './EmployeeController.js';
 
 const router = new Router();
 
-router.post('/visits', VisitsController.create);
-router.get('/visits', VisitsController.getAll);
+router.post('/visits', EmployeeController.Create);
+router.get('/visits', EmployeeController.GetAll);
 router.get('/visits/:id');
 router.put('/visits');
 router.delete('/visits/:id');

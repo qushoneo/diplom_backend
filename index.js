@@ -1,12 +1,14 @@
+import 'dotenv/config'
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes/router.js';
 
-const PORT = 5000;
-
-const DB_URL = `mongodb+srv://Qushoneo:maps17171@cluster0.se24w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const DB_URL = process.env.DB_URL;
+const PORT = process.env.PORT
 
 const app = express();
+
+
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -19,6 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 app.use('/api', router)
 
 
