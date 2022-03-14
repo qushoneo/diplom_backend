@@ -1,4 +1,5 @@
 import EmployeeService from "../services/EmployeeService.js";
+import 'dotenv/config';
 
 class EmployeeController {
   async Create(req, res) {

@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import router from './routes/router.js';
 
 const DB_URL = process.env.DB_URL;
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 
 const app = express();
 
